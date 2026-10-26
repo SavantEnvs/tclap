@@ -1,0 +1,9 @@
+project: savantenvs/tclap
+target: fuzz_value_traits
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_value_traits/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_value_traits
+    libfuzzer: true
+    timeout: 10
