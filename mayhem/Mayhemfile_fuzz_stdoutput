@@ -1,0 +1,9 @@
+project: savantenvs/tclap
+target: fuzz_stdoutput
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_stdoutput/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_stdoutput
+    libfuzzer: true
+    timeout: 10
