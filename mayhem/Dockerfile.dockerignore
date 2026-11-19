@@ -1,0 +1,4 @@
+# Build context for `docker build -f mayhem/Dockerfile .` (BuildKit reads this file in preference to a
+# root .dockerignore). Keep .git: the image needs the full history. Prune only local build output,
+# which mayhem/build.sh recreates under build/ anyway.
+build/
