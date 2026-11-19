@@ -1,0 +1,10 @@
+project: savantenvs/tclap
+# seed-from: https://app.mayhem.security/savantenvs/tclap/fuzz-stdoutput
+target: fuzz_stdoutput-mined-af16adb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_stdoutput-mined-af16adb/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_stdoutput
+    libfuzzer: true
+    timeout: 10
